@@ -1,16 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Navbar></Navbar>
+    <Topnav/>
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      baseURL : "http://remotedevs.org:8080//api/"
+    }
+  }
+  // rest of the code block
+}
+</script>
+
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Harmonia Sans,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -28,5 +37,26 @@
       color: #42b983;
     }
   }
+}
+
+a {
+    text-decoration: none !important;
+    color: rgb(48, 48, 48) !important;
+}
+.name-brand {
+    font-family: SVN-brandontext-bold,sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.name-product {
+  font-family: SVN-brandontext-bold,sans-serif;
+  font-size: 24px;
+  color: #000;
+  margin: 0 0 11px;
+  letter-spacing: 2px;
 }
 </style>
